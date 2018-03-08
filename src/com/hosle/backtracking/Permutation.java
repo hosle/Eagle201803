@@ -1,10 +1,39 @@
-package com.hosle;
+package com.hosle.backtracking;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by tanjiahao on 2018/3/5.
  * Eagle201803
  */
-public class CharactersPermutation {
+public class Permutation {
+
+    public List<List<String>> solutionForList(String dataString){
+        List<List<String>> result = new ArrayList<>();
+
+        String[] data = dataString.split("");
+
+        findPermutation(data,result,new ArrayList<>(),0);
+
+        return result;
+    }
+
+    private void findPermutation(String[] data,List<List<String>> result,List<String>perList,int start){
+
+        if(start == data.length){
+            result.add(new ArrayList(perList));
+            return;
+        }
+
+        for(int i =start;i<data.length;i++){
+            perList.add(data[i]);
+            swap(data,i,start);
+            findPermutation(data,result,perList,start+1);
+            swap(data,i,start);
+            perList.remove(perList.size()-1);
+        }
+    }
 
     public void solution(String dataString){
 
