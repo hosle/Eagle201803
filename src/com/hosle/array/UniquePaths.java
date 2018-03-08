@@ -8,16 +8,24 @@ import java.util.HashMap;
  */
 public class UniquePaths {
 
-    HashMap<Integer,Integer> solutionCell = new HashMap<>();
+
 
     public int solution(int m,int n) {
 
-        int i = 1, j = 1;
+        int[][] pathCount = new int[m][n];
 
-        solutionCell.put(12, 1);
-        solutionCell.put(21, 1);
+        for(int i = 0;i<m;i++){
+            for(int j = 0; j<n; j++){
+                if(i==0||j==0){
+                    pathCount[i][j] = 1;
+                }else{
+                    pathCount[i][j] = pathCount[i-1][j]+pathCount[i][j-1];
+                }
+            }
+        }
 
-        return solution(m - 1, n) + solution(n, m - 1);
+
+        return pathCount[m-1][n-1];
 
     }
 }
