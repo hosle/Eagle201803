@@ -26,6 +26,9 @@ public class FindDuplicate {
     *  first loop: k=nr, meet a node which is m from the entry of the cycle
      * second loop :  s=nr-m,let n = 1, when pointer begin from m and pointer begin at start must meet at the entry
     * */
+
+
+
     public int solution(int[] nums) {
         int slow = nums[0];
         int fast = nums[nums[0]];
