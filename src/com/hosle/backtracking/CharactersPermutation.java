@@ -1,4 +1,4 @@
-package com.hosle;
+package com.hosle.backtracking;
 
 /**
  * Created by tanjiahao on 2018/3/5.

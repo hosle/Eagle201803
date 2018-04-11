@@ -1,6 +1,6 @@
-package test.com.hosle;
+package test.com.hosle.backtracking;
 
-import com.hosle.CharactersPermutation;
+import com.hosle.backtracking.CharactersPermutation;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
