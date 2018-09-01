@@ -14,13 +14,18 @@
 
 ## backtracking
 
-1. Permutation
-2. SubSets
+1. CharactersPermutation
+2. Permutation
+3. SubSets
 
 ## linked_list
 
 1. DetectCycleInLinkedList
 2. ListNode
+
+## sort
+
+1. QuickSort
 
 ## string
 
