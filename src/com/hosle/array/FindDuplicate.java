@@ -27,8 +27,6 @@ public class FindDuplicate {
      * second loop :  s=nr-m,let n = 1, when pointer begin from m and pointer begin at start must meet at the entry
     * */
 
-
-
     public int solution(int[] nums) {
         int slow = nums[0];
         int fast = nums[nums[0]];
