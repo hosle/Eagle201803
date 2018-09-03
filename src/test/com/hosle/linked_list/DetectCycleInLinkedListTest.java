@@ -16,11 +16,11 @@ public class DetectCycleInLinkedListTest {
 
     @After
     public void tearDown() throws Exception {
-        if(null == result){
-            System.out.println("no cycle");
-        }else{
-            System.out.println(result.val);
-        }
+//        if(null == result){
+//            System.out.println("no cycle");
+//        }else{
+//            System.out.println(result.val);
+//        }
     }
 
     @Test
@@ -29,7 +29,20 @@ public class DetectCycleInLinkedListTest {
         ListNode node2 = new ListNode(2);
         node1.next = node2;
 
-        result = new DetectCycleInLinkedList().solution(node1);
+        assertNull(new DetectCycleInLinkedList().solution(node1));
+
+        ListNode node3 = new ListNode(3);
+        node2.next = node3;
+
+        assertNull(new DetectCycleInLinkedList().solution(node1));
+
+        ListNode node4 = new ListNode(4);
+        node3.next = node4;
+        node4.next = node2;
+
+        assertEquals(2,new DetectCycleInLinkedList().solution(node1).val);
+
+
     }
 
 }
