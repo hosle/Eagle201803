@@ -12,24 +12,33 @@
 8. SortColors
 9. UniquePaths
 
-## backtracking
+## Backtracking
 
 1. CharactersPermutation
 2. Permutation
 3. SubSets
 
-## linked_list
+## Dynamic Programming
+
+1. BuyAndSellStock
+
+## Linked_list
 
 1. DetectCycleInLinkedList
 2. ListNode
 
-## sort
+## Sort
 
 1. QuickSort
 
-## string
+## String
 
 1. ReverseString
+2. ReverseString2
+
+## TwoPointers
+
+1. DuplicateNum
 
 ## Other
 
