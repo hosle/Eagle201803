@@ -77,4 +77,10 @@ public class QuickSortTest {
         assertArrayEquals(emptyArray,result);
 
     }
+
+    @Test
+    public void solution5(){
+        long a =-10;
+        System.out.println(a>>>1);
+    }
 }
