@@ -1,10 +1,33 @@
 package com.hosle;
 
+import java.util.PriorityQueue;
+
 /**
  * Created by tanjiahao on 2018/3/5.
  * Eagle201803
  */
 public class KSmallestElement {
+
+    /**
+     *  find kth smallest element
+     *
+     * @param data
+     * @param k
+     * @return
+     */
+    public int solution1(int[] data, int k){
+        PriorityQueue<Integer> queue = new PriorityQueue<Integer>();
+
+        for(int item : data){
+            queue.offer(item);
+
+            if(queue.size()>k){
+                queue.poll();
+            }
+        }
+
+        return queue.peek() == null?-1:queue.peek();
+    }
 
     public int[] solution(int[] data,int k){
         if (k > data.length)

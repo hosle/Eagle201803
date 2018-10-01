@@ -52,4 +52,10 @@ public class UtilsTest {
         ArrayList<String> stringList = new ArrayList<>(Arrays.asList("a","b","c"));
 
     }
+
+    @Test
+    public void regularExpr(){
+        String s = "A man, a plan, a canal: Panama".replaceAll("[^a-zA-Z0-9]", "-");
+        System.out.println(s);
+    }
 }

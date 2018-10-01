@@ -3,6 +3,9 @@ package com.hosle.array;
 import java.util.ArrayList;
 import java.util.HashSet;
 
+/**
+ *  在乱序数组中，找出中间大小的数，基数个有一个，偶数个有两个
+ */
 public class FindMidNum {
 
     public int solution(int[] input){

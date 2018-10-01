@@ -8,15 +8,23 @@ Utils about Arrays and Collections
 
 ## Array
 
+1. EvaluateReversepolishNotation
 1. FindDuplicate
+1. FindMidNum
+1. InsertInterval(*)
+1. MergeInterval
 2. MajorityElement
 3. MaxProfit
+3. MinimumSizeSubArraySum
 4. MoveZeros
 5. productExceptSelf
+5. RotateArray
 6. RotateMatrix
 7. SearchInRotateSortArray
 8. SortColors
 9. UniquePaths
+10. ValidPalindrome
+
 
 ## Backtracking
 

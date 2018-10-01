@@ -1,9 +1,11 @@
-package test.com.hosle;
+package com.hosle;
 
 import com.hosle.KSmallestElement;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 
 /**
  * Created by tanjiahao on 2018/3/5.
@@ -21,9 +23,9 @@ public class KSmallestElementTest {
     public void tearDown() throws Exception {
 
 
-        for (int i = 0; i < result.length; i++) {
-            System.out.print(result[i] + ",");
-        }
+//        for (int i = 0; i < result.length; i++) {
+//            System.out.print(result[i] + ",");
+//        }
     }
 
     @Test
@@ -42,6 +44,12 @@ public class KSmallestElementTest {
     public void solution3() throws Exception {
         data = new int[]{4};
         result = new KSmallestElement().solution(data,2);
+    }
+
+    @Test
+    public void solutionKth() {
+        data = new int[]{3,2,1,5,6,4};
+        assertEquals(5,new KSmallestElement().solution1(data,2));
     }
 
 }
