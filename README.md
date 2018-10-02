@@ -15,7 +15,7 @@ Utils about Arrays and Collections
 1. MergeInterval
 2. MajorityElement
 3. MaxProfit
-3. MinimumSizeSubArraySum
+3. MinimumSizeSubArraySum (*)
 4. MoveZeros
 5. productExceptSelf
 5. RotateArray
@@ -40,10 +40,18 @@ Utils about Arrays and Collections
 
 1. DetectCycleInLinkedList
 2. ListNode
+3. Listutil
+4. MergeTwoSortedLists
+5. OddEvenLinkedList
+6. RemoveDuplicatesfromSortedList
 
 ## Sort
 
 1. QuickSort
+
+## Stack
+
+1. StackImpByArray
 
 ## String
 
@@ -51,6 +59,7 @@ Utils about Arrays and Collections
 2. ReverseString2
 
 ## Tree
+1. BinaryTreePreorderTraversal
 1. Traverse
 2. TreeUtil.createByArray
 
