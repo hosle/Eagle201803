@@ -45,6 +45,10 @@ Utils about Arrays and Collections
 5. OddEvenLinkedList
 6. RemoveDuplicatesfromSortedList
 
+## LRU Cache
+
+1. LRU Cache
+
 ## Sort
 
 1. QuickSort
