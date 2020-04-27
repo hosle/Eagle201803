@@ -8,7 +8,7 @@ Utils about Arrays and Collections
 
 ## Array
 
-1. EvaluateReversepolishNotation
+1. EvaluateReversePolishNotation
 1. FindDuplicate
 1. FindMidNum
 1. InsertInterval(*)
@@ -40,10 +40,10 @@ Utils about Arrays and Collections
 
 1. DetectCycleInLinkedList
 2. ListNode
-3. Listutil
+3. ListUtil
 4. MergeTwoSortedLists
 5. OddEvenLinkedList
-6. RemoveDuplicatesfromSortedList
+6. RemoveDuplicatesFromSortedList
 
 ## LRU Cache
 
@@ -63,7 +63,7 @@ Utils about Arrays and Collections
 2. ReverseString2
 
 ## Tree
-1. BinaryTreePreorderTraversal
+1. BinaryTreePreOrderTraversal
 1. Traverse
 2. TreeUtil.createByArray
 
