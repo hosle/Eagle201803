@@ -40,4 +40,9 @@ public class PermutationTest {
         }
     }
 
+    @Test
+    public void solution2() {
+        new Permutation().solution2(new int[]{1,2,3});
+    }
+
 }

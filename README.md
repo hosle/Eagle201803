@@ -30,7 +30,8 @@ Utils about Arrays and Collections
 
 1. CharactersPermutation
 2. Permutation
-3. SubSets
+3. PermutationUnique
+4. SubSets
 
 ## Dynamic Programming
 
