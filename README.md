@@ -24,7 +24,7 @@ Utils about Arrays and Collections
 8. SortColors
 9. UniquePaths
 10. ValidPalindrome
-
+11. MergeKSortedArray
 
 ## Backtracking
 
@@ -43,6 +43,7 @@ Utils about Arrays and Collections
 2. ListNode
 3. ListUtil
 4. MergeTwoSortedLists
+5. MergeKSortedArray
 5. OddEvenLinkedList
 6. RemoveDuplicatesFromSortedList
 
