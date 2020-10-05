@@ -2,6 +2,24 @@ package com.hosle.sort;
 
 import java.util.ArrayList;
 
+/**
+ https://www.geeksforgeeks.org/quick-sort/?ref=lbp
+
+ Worst Case:
+ T(n) = T(0) + T(n-1) + \theta(n)
+ which is equivalent to
+ T(n) = T(n-1) + O(n)
+
+ O(N^2)
+
+ Best Case :
+ T(n) = 2T(n/2) + O(n)
+
+ O(nlogN)
+
+ How to calculate the time complexity
+ https://en.wikipedia.org/wiki/Master_theorem_(analysis_of_algorithms)
+ */
 public class QuickSort {
 
     public Integer[] solution(ArrayList<Integer> origin){

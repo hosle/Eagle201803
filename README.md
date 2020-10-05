@@ -54,6 +54,9 @@ Utils about Arrays and Collections
 ## Sort
 
 1. QuickSort
+2. BubbleSort
+3. BucketSort
+4. MergeSort
 
 ## Stack
 
