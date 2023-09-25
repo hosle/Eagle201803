@@ -69,8 +69,10 @@ Utils about Arrays and Collections
 
 ## Tree
 1. BinaryTreePreOrderTraversal
-1. Traverse
-2. TreeUtil.createByArray
+2. Traverse
+3. TreeUtil.createByArray
+4. BinaryTreeLevelOrderTraversal
+5. BinaryTreeZigzagOrderTraversal
 
 ## TwoPointers
 
