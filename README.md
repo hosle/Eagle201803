@@ -73,6 +73,7 @@ Utils about Arrays and Collections
 3. TreeUtil.createByArray
 4. BinaryTreeLevelOrderTraversal
 5. BinaryTreeZigzagOrderTraversal
+6. BTreePaths
 
 ## TwoPointers
 
