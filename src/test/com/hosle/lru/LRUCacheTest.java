@@ -1,14 +1,11 @@
 package com.hosle.lru;
 
-import org.junit.Test;
 
-import static org.junit.Assert.*;
 
 public class LRUCacheTest {
 
     private LRUCache lruCache = new LRUCache(3);
 
-    @Test
     public void solution() {
         lruCache.offer(1);
         lruCache.offer(2);

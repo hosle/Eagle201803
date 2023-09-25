@@ -1,10 +1,10 @@
 package com.hosle.array;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
 
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class SearchInRotateSortArrayTest {
 
@@ -12,11 +12,8 @@ public class SearchInRotateSortArrayTest {
     int target;
     int result;
 
-    @Before
-    public void setUp() throws Exception {
-    }
 
-    @After
+    @AfterAll
     public void tearDown() throws Exception {
         System.out.println("result = "+ result);
     }

@@ -1,20 +1,11 @@
 package com.hosle.array;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
 
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class RotateArrayTest {
-
-    @Before
-    public void setUp() throws Exception {
-    }
-
-    @After
-    public void tearDown() throws Exception {
-    }
 
     @Test
     public void solution1() {
@@ -22,7 +13,7 @@ public class RotateArrayTest {
 
         int[] result = new RotateArray().solution1(data,3,7);
 
-        assertArrayEquals(new int[]{5,6,7,1,2,3,4},result);
+        assertEquals(new int[]{5,6,7,1,2,3,4},result);
 
     }
 
@@ -32,6 +23,6 @@ public class RotateArrayTest {
 
         new RotateArray().solution2(data,3,7);
 
-        assertArrayEquals(new int[]{5,6,7,1,2,3,4},data);
+        assertEquals(new int[]{5,6,7,1,2,3,4},data);
     }
 }

@@ -1,12 +1,10 @@
 package com.hosle.basic;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.Test;
 
 import java.util.*;
 
-import static org.junit.Assert.*;
 
 public class UtilsTest {
 
@@ -14,14 +12,6 @@ public class UtilsTest {
     Integer[] dataInteger = new Integer[]{1,3,4,8,10,2};
 
     LinkedList<Integer> dataList = new LinkedList<>();
-
-    @Before
-    public void setUp() throws Exception {
-    }
-
-    @After
-    public void tearDown() throws Exception {
-    }
 
     @Test
     public void sort() {

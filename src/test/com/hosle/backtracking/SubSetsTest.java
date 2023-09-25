@@ -1,21 +1,22 @@
-package test.com.hosle.backtracking;
+package com.hosle.backtracking;
 
 import com.hosle.backtracking.SubSets;
-import org.junit.After;
-import org.junit.Test;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInstance;
 
 import java.util.List;
 
-import static org.junit.Assert.*;
 
 /**
  * Created by tanjiahao on 2018/3/8.
  * Eagle201803
  */
+@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class SubSetsTest {
     int[]data;
     List<List<Integer>> result = null;
-    @After
+    @AfterAll
     public void tearDown() throws Exception {
         for(List<Integer> itemList : result){
             for(int item : itemList){

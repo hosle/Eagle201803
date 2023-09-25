@@ -1,15 +1,16 @@
 package com.hosle.array;
 
-import org.junit.After;
-import org.junit.Test;
 
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 public class SortColorsTest {
 
     int[] data;
 
-    @After
+    @AfterAll
     public void tearDown() throws Exception {
     }
 

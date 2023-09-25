@@ -1,23 +1,21 @@
 package com.hosle.sort;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+
 
 public class QuickSortTest {
 
     Integer[] result;
 
-    @Before
-    public void setUp() throws Exception {
-    }
 
-    @After
+    @AfterAll
     public void tearDown() throws Exception {
 
         if(null!=result) {

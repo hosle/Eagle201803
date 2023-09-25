@@ -1,21 +1,16 @@
-package test.com.hosle.backtracking;
+package com.hosle.backtracking;
 
 import com.hosle.backtracking.CharactersPermutation;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 
 /**
  * Created by tanjiahao on 2018/3/5.
  * Eagle201803
  */
 public class CharactersPermutationTest {
-    @Before
+    @BeforeAll
     public void setUp() throws Exception {
-    }
-
-    @After
-    public void tearDown() throws Exception {
     }
 
     @Test

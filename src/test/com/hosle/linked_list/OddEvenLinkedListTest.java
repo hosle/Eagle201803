@@ -1,18 +1,13 @@
 package com.hosle.linked_list;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.*;
 
 public class OddEvenLinkedListTest {
 
-    @Before
-    public void setUp() throws Exception {
-    }
 
-    @After
+    @AfterAll
     public void tearDown() throws Exception {
         while(result!=null){
             System.out.print(result.val+",");

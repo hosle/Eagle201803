@@ -1,10 +1,8 @@
 package test.com.hosle.array;
 
 import com.hosle.array.RotateMatrix;
-import org.junit.After;
-import org.junit.Test;
-
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.Test;
 
 /**
  * Created by tanjiahao on 2018/3/7.
@@ -13,7 +11,7 @@ import static org.junit.Assert.*;
 public class RotateMatrixTest {
     int[][] data;
     int[][] result;
-    @After
+    @AfterAll
     public void tearDown() throws Exception {
         result = new RotateMatrix().solution(data);
 

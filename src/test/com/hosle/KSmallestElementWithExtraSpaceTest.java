@@ -1,13 +1,12 @@
-package test.com.hosle;
+package com.hosle;
 
 import com.hosle.KSmallestElementWithExtraSpace;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 
 import java.util.*;
 
-import static org.junit.Assert.*;
 
 /**
  * Created by tanjiahao on 2018/3/5.
@@ -18,11 +17,11 @@ public class KSmallestElementWithExtraSpaceTest {
     int[] data;
     TreeMap<Integer,Integer> result;
 
-    @Before
+    @BeforeAll
     public void setUp() throws Exception {
     }
 
-    @After
+    @AfterAll
     public void tearDown() throws Exception {
 
         for (Map.Entry<Integer, Integer> item : result.entrySet()) {

@@ -1,10 +1,8 @@
-package test.com.hosle;
+package com.hosle;
 
-import com.hosle.SelectMostElement;
-import com.hosle.SelectMostElementByAccumulated;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 
 /**
  * Created by tanjiahao on 2018/3/2.
@@ -14,11 +12,11 @@ public class SelectMostElementTest {
 
     int result = -1;
 
-    @Before
+    @BeforeAll
     public void setUp() throws Exception {
     }
 
-    @After
+    @AfterAll
     public void tearDown() throws Exception {
         System.out.println(result);
     }

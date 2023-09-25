@@ -1,11 +1,8 @@
 package test.com.hosle.array;
 
 import com.hosle.array.MaxProfit;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
-
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.Test;
 
 /**
  * Created by tanjiahao on 2018/3/6.
@@ -16,7 +13,7 @@ public class MaxProfitTest {
     int result;
     int[] data;
 
-    @After
+    @AfterAll
     public void tearDown() throws Exception {
         result = new MaxProfit().solution(data);
         System.out.print(result);

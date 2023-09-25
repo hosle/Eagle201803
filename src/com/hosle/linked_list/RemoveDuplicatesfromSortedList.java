@@ -1,7 +1,5 @@
 package com.hosle.linked_list;
 
-import com.sun.xml.internal.ws.api.message.HeaderList;
-
 /**
  * Given a sorted linked list,
  *

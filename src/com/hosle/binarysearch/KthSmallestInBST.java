@@ -2,8 +2,6 @@ package com.hosle.binarysearch;
 
 import com.hosle.tree.TreeNode;
 
-import static com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type.Int;
-
 /**
  * Given a binary search tree,
  * write a function kthSmallest to find the kth smallest element in it.

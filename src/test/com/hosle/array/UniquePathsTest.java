@@ -1,10 +1,9 @@
-package test.com.hosle.array;
+package com.hosle.array;
 
 import com.hosle.array.UniquePaths;
-import org.junit.After;
-import org.junit.Test;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.*;
 
 /**
  * Created by tanjiahao on 2018/3/6.
@@ -14,7 +13,7 @@ public class UniquePathsTest {
     int m,n;
     int result;
 
-    @After
+    @AfterAll
     public void tearDown() throws Exception {
         result = new UniquePaths().solution(m,n);
         System.out.print(result);

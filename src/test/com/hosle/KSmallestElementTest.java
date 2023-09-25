@@ -1,11 +1,12 @@
 package com.hosle;
 
 import com.hosle.KSmallestElement;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 
 /**
  * Created by tanjiahao on 2018/3/5.
@@ -15,11 +16,11 @@ public class KSmallestElementTest {
     int[]data;
     int []result;
 
-    @Before
+    @BeforeAll
     public void setUp() throws Exception {
     }
 
-    @After
+    @AfterAll
     public void tearDown() throws Exception {
 
 

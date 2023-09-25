@@ -1,9 +1,7 @@
-package test.com.hosle.backtracking;
+package com.hosle.backtracking;
 
 import com.hosle.backtracking.Permutation;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
@@ -14,14 +12,6 @@ import java.util.List;
 public class PermutationTest {
 
     List<List<String>> result;
-    @Before
-    public void setUp() throws Exception {
-    }
-
-    @After
-    public void tearDown() throws Exception {
-
-    }
 
     @Test
     public void solution() throws Exception {

@@ -2,21 +2,13 @@ package com.hosle.binarysearch;
 
 import com.hosle.tree.TreeNode;
 import com.hosle.tree.TreeUtil;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 
 public class KthSmallestInBSTTest {
 
-    @Before
-    public void setUp() throws Exception {
-    }
-
-    @After
-    public void tearDown() throws Exception {
-    }
 
     @Test
     public void solution() {

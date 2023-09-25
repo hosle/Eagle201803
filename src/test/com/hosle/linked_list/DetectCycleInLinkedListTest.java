@@ -1,11 +1,13 @@
-package test.com.hosle.linked_list;
+package com.hosle.linked_list;
 
 import com.hosle.linked_list.DetectCycleInLinkedList;
 import com.hosle.linked_list.ListNode;
-import org.junit.After;
-import org.junit.Test;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
+
 
 /**
  * Created by tanjiahao on 2018/3/8.
@@ -14,7 +16,7 @@ import static org.junit.Assert.*;
 public class DetectCycleInLinkedListTest {
     ListNode result = null;
 
-    @After
+    @AfterAll
     public void tearDown() throws Exception {
 //        if(null == result){
 //            System.out.println("no cycle");

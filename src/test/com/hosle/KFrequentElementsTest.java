@@ -1,13 +1,12 @@
-package test.com.hosle;
+package com.hosle;
 
 import com.hosle.KFrequentElements;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-import static org.junit.Assert.*;
 
 /**
  * Created by tanjiahao on 2018/3/5.
@@ -17,11 +16,11 @@ public class KFrequentElementsTest {
 
     List<Integer> result;
 
-    @Before
+    @BeforeAll
     public void setUp() throws Exception {
     }
 
-    @After
+    @AfterAll
     public void tearDown() throws Exception {
         for(int item:result){
             System.out.print(item+",");

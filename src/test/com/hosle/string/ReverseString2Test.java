@@ -1,18 +1,20 @@
 package com.hosle.string;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
+
 
 public class ReverseString2Test {
 
-    @Before
+    @BeforeAll
     public void setUp() throws Exception {
     }
 
-    @After
+    @AfterAll
     public void tearDown() throws Exception {
     }
 

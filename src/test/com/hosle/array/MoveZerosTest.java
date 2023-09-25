@@ -1,11 +1,8 @@
 package test.com.hosle.array;
 
 import com.hosle.array.MoveZeros;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
-
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.Test;
 
 /**
  * Created by tanjiahao on 2018/3/6.
@@ -14,11 +11,8 @@ import static org.junit.Assert.*;
 public class MoveZerosTest {
 
     int[] data;
-    @Before
-    public void setUp() throws Exception {
-    }
 
-    @After
+    @AfterAll
     public void tearDown() throws Exception {
         new MoveZeros().solution(data);
         for(int item : data)
