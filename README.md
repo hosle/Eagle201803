@@ -68,12 +68,14 @@ Utils about Arrays and Collections
 2. ReverseString2
 
 ## Tree
+
 1. BinaryTreePreOrderTraversal
 2. Traverse
 3. TreeUtil.createByArray
 4. BinaryTreeLevelOrderTraversal
 5. BinaryTreeZigzagOrderTraversal
 6. BTreePaths
+7. TrimAllLeaves
 
 ## TwoPointers
 
