@@ -10,13 +10,13 @@ import org.junit.jupiter.api.Test;
  * Eagle201803
  */
 public class MajorityElementTest {
-    int result;
+    static int result;
     @BeforeAll
-    public void setUp() throws Exception {
+    public static void setUp() throws Exception {
     }
 
     @AfterAll
-    public void tearDown() throws Exception {
+    public static void tearDown() throws Exception {
         System.out.print(result);
     }
 

@@ -12,11 +12,11 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 public class QuickSortTest {
 
-    Integer[] result;
+    static Integer[] result;
 
 
     @AfterAll
-    public void tearDown() throws Exception {
+    public static void tearDown() throws Exception {
 
         if(null!=result) {
             System.out.print("result size = " + result.length + ": ");

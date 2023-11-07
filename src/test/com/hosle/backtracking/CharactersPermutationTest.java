@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
  */
 public class CharactersPermutationTest {
     @BeforeAll
-    public void setUp() throws Exception {
+    public static void setUp() throws Exception {
     }
 
     @Test
