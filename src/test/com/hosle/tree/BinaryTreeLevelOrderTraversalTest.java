@@ -4,6 +4,8 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+
 class BinaryTreeLevelOrderTraversalTest {
 
     TreeNode tree = null;
@@ -64,5 +66,27 @@ class BinaryTreeLevelOrderTraversalTest {
     @Test
     void binaryTreeZigzagOrderTraversal() {
         new BinaryTreeZigzagOrderTraversal().solution(tree);
+    }
+
+    @Test
+    void solution2(){
+        new BinaryTreeZigzagOrderTraversal().traverse(tree);
+    }
+
+    @Test
+    void solution3(){
+        new TrimAllLeaves().solution(tree);
+        ArrayList<Integer> result = new Traverse().preOrder(tree);
+        System.out.println();
+        for (int item : result){
+            System.out.print(item + ",");
+        }
+    }
+
+    @Test
+    void traverse2(){
+        new Traverse().postOrder(tree);
+        new Traverse().inOrder(tree);
+        new Traverse().preOrder(tree);
     }
 }

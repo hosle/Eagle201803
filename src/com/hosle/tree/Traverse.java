@@ -8,6 +8,7 @@ public class Traverse {
         ArrayList<Integer> result = new ArrayList<>();
 
         doPreOrder(root,result);
+        System.out.println();
 
         return result;
     }
@@ -18,6 +19,7 @@ public class Traverse {
         }
 
         result.add(root.val);
+        System.out.print(root.val + " ");
 
         doPreOrder(root.left,result);
         doPreOrder(root.right,result);
@@ -27,6 +29,7 @@ public class Traverse {
         ArrayList<java.lang.Integer> result = new ArrayList<>();
 
         doInOrder(root,result);
+        System.out.println();
 
         return result;
     }
@@ -38,6 +41,26 @@ public class Traverse {
 
         doInOrder(root.left,result);
         result.add(root.val);
+        System.out.print(root.val + " ");
         doInOrder(root.right,result);
+    }
+
+    public ArrayList<Integer> postOrder(TreeNode root){
+        ArrayList<Integer> result = new ArrayList<>();
+
+        doPostOrder(root, result);
+        System.out.println();
+        return result;
+    }
+
+    private void doPostOrder(TreeNode root, ArrayList<Integer> result){
+        if (null == root){
+            return;
+        }
+
+        doPostOrder(root.left, result);
+        doPostOrder(root.right, result);
+        result.add(root.val);
+        System.out.print(root.val + " ");
     }
 }
