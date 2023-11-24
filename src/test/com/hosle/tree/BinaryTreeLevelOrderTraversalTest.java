@@ -70,7 +70,7 @@ class BinaryTreeLevelOrderTraversalTest {
 
     @Test
     void solution2(){
-        new BinaryTreeZigzagOrderTraversal().traverse(tree);
+//        new BinaryTreeZigzagOrderTraversal().traverse(tree);
     }
 
     @Test

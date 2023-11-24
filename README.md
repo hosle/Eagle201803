@@ -25,6 +25,7 @@ Utils about Arrays and Collections
 9. UniquePaths
 10. ValidPalindrome
 11. MergeKSortedArray
+12. RotationMatrix
 
 ## Backtracking
 
