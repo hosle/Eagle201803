@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class BuyAndSellStockTest {
 
     @AfterAll
-    public void tearDown() throws Exception {
+    public static void tearDown() throws Exception {
     }
 
     @Test
@@ -26,5 +26,13 @@ public class BuyAndSellStockTest {
         int[] prices = new int[]{7,6,4,3,1};
 
         assertEquals(0,new BuyAndSellStock().maxProfit(prices));
+    }
+
+    @Test
+    public void solution(){
+        int[] prices = new int[]{7,1,5,3,6,4};
+
+        int result = new BuyAndSellStock().maxProfit(prices);
+        System.out.println(result);
     }
 }

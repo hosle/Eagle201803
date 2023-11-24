@@ -1,5 +1,7 @@
 package com.hosle.dynamicprogramming;
 
+import java.util.ArrayList;
+
 /**
 Say you have an array for which the ith element is the price of a given stock on day i.
 
@@ -42,5 +44,19 @@ public class BuyAndSellStock {
             return 0;
         }
 //        for(int )
+    }
+
+    public int solution(int[] prices) {
+        //[7,1,5,3,6,4]
+        ArrayList<Integer> profits = new ArrayList<>(prices.length);
+        int minPrice = prices[0];
+        int maxProfit = 0;
+        for (int i = 0; i < prices.length; i++) {
+            minPrice = Math.min(prices[i], minPrice);
+            int profit = prices[i] - minPrice;
+            profits.set(i, profit);
+            maxProfit = Math.max(maxProfit, profit);
+        }
+        return maxProfit;
     }
 }

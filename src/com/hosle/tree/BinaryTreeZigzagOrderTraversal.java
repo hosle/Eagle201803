@@ -2,8 +2,10 @@ package com.hosle.tree;
 
 import com.sun.source.tree.Tree;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedList;
+import java.util.Stack;
 import java.util.concurrent.LinkedBlockingQueue;
 
 /**
@@ -67,6 +69,42 @@ public class BinaryTreeZigzagOrderTraversal {
                 }
             }
             reverse = !reverse;
+        }
+    }
+
+    public void traverse(TreeNode root) {
+        LinkedList<LinkedList<TreeNode>> queue = new LinkedList<>();
+        LinkedList<TreeNode> start = new LinkedList<>();
+        start.add(root);
+        queue.add(start);
+        boolean reverse = false;
+        while (!queue.isEmpty()) {
+            LinkedList<TreeNode> nodes = queue.poll();
+            LinkedList<TreeNode> nextLevel = new LinkedList<>();
+
+            if (reverse){
+                for (int i = nodes.size() - 1; i >= 0; i--) {
+                    TreeNode node = nodes.get(i);
+                    System.out.print(node.val + ",");
+                }
+            } else {
+                for (int i = 0; i < nodes.size(); i++) {
+                    TreeNode node = nodes.get(i);
+                    System.out.print(node.val + ",");
+                }
+            }
+            reverse = !reverse;
+
+            for (TreeNode node : nodes){
+                if (node.left != null)
+                    nextLevel.add(node.left);
+                if (node.right != null)
+                    nextLevel.add(node.right);
+            }
+
+            if (!nextLevel.isEmpty()) {
+                queue.add(nextLevel);
+            }
         }
     }
 }
