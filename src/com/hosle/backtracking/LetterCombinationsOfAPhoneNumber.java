@@ -44,26 +44,34 @@ public class LetterCombinationsOfAPhoneNumber {
         digitLetterMap.put("8",Arrays.asList(new String[]{"t","u","v"}));
         digitLetterMap.put("9",Arrays.asList(new String[]{"w","x","y","z"}));
 
-        ArrayList<String> results = new ArrayList<String>();
-        for(int i = 0; i < digits.length();i++){
-            String digit = digits.substring(i,i+1);
-            StringBuilder oneResult = new StringBuilder();
-            letterCombine(results, oneResult, digitLetterMap.get(digit),0);
+        if (digits.trim().isEmpty()){
+            return new ArrayList<String>();
         }
+
+        ArrayList<String> results = new ArrayList<String>();
+        String[] digitArr = digits.split("");
+
+
+        letterCombine(results, "", new LinkedList<String>(Arrays.asList(digitArr)), digitLetterMap);
 
         return results;
 
     }
 
-    public void letterCombine(List<String> result, StringBuilder curResult, List<String> optionalLetter, int index){
-        if (index == optionalLetter.size()-1) {
-            result.add(curResult.toString());
+    public void letterCombine(List<String> result, String curResult, LinkedList<String> optionalDigits, HashMap<String,List<String>> map){
+        if (optionalDigits.isEmpty()){
+            result.add(curResult);
             return;
         }
+        String digit = optionalDigits.removeFirst();
+        List<String> letters = map.get(digit);
 
-        curResult.append(optionalLetter.get(index+1));
-        letterCombine(result, curResult, optionalLetter, index+1);
-        curResult.deleteCharAt(curResult.length()-1);
+        for (String letter : letters){
+            curResult = curResult + letter;
+            letterCombine(result, curResult, optionalDigits, map);
+            curResult = curResult.substring(0,curResult.length()-1);
+        }
+        optionalDigits.addFirst(digit);
     }
 
 }

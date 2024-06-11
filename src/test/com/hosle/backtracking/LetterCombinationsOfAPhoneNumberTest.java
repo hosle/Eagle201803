@@ -14,5 +14,9 @@ class LetterCombinationsOfAPhoneNumberTest {
     @Test
     void solution() {
         assertEquals(Arrays.asList(new String[]{"ad","ae","af","bd","be","bf","cd","ce","cf"}), new LetterCombinationsOfAPhoneNumber().solution("23"));
+        assertEquals(Arrays.asList(new String[]{}), new LetterCombinationsOfAPhoneNumber().solution(""));
+        assertEquals(Arrays.asList(new String[]{"a","b","c"}), new LetterCombinationsOfAPhoneNumber().solution("2"));
+        assertEquals(Arrays.asList(new String[]{"adg","adh","adi","aeg","aeh","aei","afg","afh","afi","bdg","bdh","bdi","beg","beh","bei","bfg","bfh","bfi","cdg","cdh","cdi","ceg","ceh","cei","cfg","cfh","cfi"}),
+                new LetterCombinationsOfAPhoneNumber().solution("234"));
     }
 }
