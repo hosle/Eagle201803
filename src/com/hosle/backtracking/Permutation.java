@@ -1,6 +1,8 @@
 package com.hosle.backtracking;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -103,5 +105,26 @@ public class Permutation {
         int temp = input[i];
         input[i] = input[j];
         input[j] = temp;
+    }
+
+
+
+    public void solution3(Integer[] input){
+        permutation3(new LinkedList<>(), new LinkedList<>(Arrays.asList(input)));
+    }
+
+    public void permutation3(LinkedList<Integer> intermediate, LinkedList<Integer> options){
+        if (options.isEmpty()){
+            intermediate.forEach(System.out::print);
+            System.out.println();
+        }
+
+        for (Integer option : options){
+            intermediate.add(option);
+            LinkedList<Integer> newOptions = new LinkedList<>(options);
+            newOptions.remove(option);
+            permutation3(intermediate, newOptions);
+            intermediate.remove(option);
+        }
     }
 }
