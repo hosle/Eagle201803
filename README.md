@@ -33,6 +33,7 @@ Utils about Arrays and Collections
 2. Permutation
 3. PermutationUnique
 4. SubSets
+5. LetterCombinationsOfAPhoneNumber
 
 ## Dynamic Programming
 
@@ -68,6 +69,9 @@ Utils about Arrays and Collections
 
 1. ReverseString
 2. ReverseString2
+3. FrontBack
+4. MissingChar
+5. StringTimes
 
 ## Tree
 
@@ -82,6 +86,22 @@ Utils about Arrays and Collections
 ## TwoPointers
 
 1. DuplicateNum
+
+## Map
+
+1. Word0
+
+## Math
+
+1. SubArraySumDivisibleByK
+
+
+## UnionFind
+4. UnionFind
+1. LongestConsecutiveSequence
+2. NumbersOfIslands
+3. Surrounded Regions
+
 
 ## Other
 
