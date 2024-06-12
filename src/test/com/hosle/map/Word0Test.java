@@ -1,4 +1,4 @@
-package com.map;
+package com.hosle.map;
 
 import com.hosle.map.Word0;
 import org.junit.jupiter.api.Test;
