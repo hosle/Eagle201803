@@ -42,39 +42,56 @@ package com.hosle.math;
 
 import java.util.*;
 
+// i             i+1
+// a[i]%k!=0     a[i+1]%k == 0 , true,   map.get(0) >= 1,
+// a[i]%k    ==  a[i+1]%k ,      false,  map.get(x) == 2, mod(i) == mod(i+1) == x
+// a[i]%k==0     a[i+1]%k == 0 , true,   map.get(0) == 2
+// a[j]%k == 0, j>0,             true,   map.get(0) == 1
+// a[0]%k == 0, a[1]%k != 0,     false,  map.get(0) == 1,
+
 public class ContinuousSubarraySum {
     public boolean solution(int[] nums, int k) {
 
-        if (nums.length <= 1){
-            return false;
-        }
-
         int preSum = 0;
         HashMap<Integer, Integer> remainders = new HashMap<Integer, Integer>();
-//        remainders.put(0, 1);
 
-        for (int num : nums) {
-            preSum += num;
-            int remainder = preSum % k;
-
-            if (remainder < 0) {
-                remainder += k;
-            }
-
-            if (remainder == 0 && preSum > num){
-                return true;
-            }
-
-            if (remainders.containsKey(remainder)) {
-                if (remainders.get(remainder) > 0) {
+        if (k == 0){
+            for (int i = 1; i<nums.length;i++){
+                if (nums[i] == 0 && nums[i-1] == 0){
                     return true;
                 }
-
-                remainders.put(remainder, remainders.get(remainder) + 1);
-            } else {
-                remainders.put(remainder, 1);
             }
+            return false;
+        }
+        //a[0]%k == 0, a[1]%k != 0
+        if (nums[0]%k != 0) {
+            // a[i]%k!=0     a[i+1]%k == 0 , true,   map.get(0) >= 1,
+            remainders.put(0, 1);
+        }
+
+        int preRemainder = Integer.MIN_VALUE;
+        for (int i = 0; i < nums.length; i++) {
+
+            preSum += nums[i];
+            int remainder = preSum % k;
+
+            if (remainders.containsKey(remainder) && remainders.get(remainder) > 0){
+                if (preRemainder==remainder) {
+                    if (remainder == 0) {
+                        return true;
+                    } else {
+                        continue;
+                    }
+                } else {
+                    return true;
+                }
+            }
+            if (preSum > k || remainder == 0) {
+                remainders.put(remainder, remainders.getOrDefault(remainder, 1));
+            }
+            preRemainder = remainder;
         }
         return false;
+
     }
 }
