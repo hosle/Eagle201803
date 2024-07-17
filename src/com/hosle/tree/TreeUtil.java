@@ -1,5 +1,7 @@
 package com.hosle.tree;
 
+import java.util.ArrayList;
+
 public class TreeUtil {
 
     public TreeNode createByArray(Integer[] array){
@@ -21,5 +23,18 @@ public class TreeUtil {
         root.right = build(array, index * 2 + 1);
 
         return root;
+    }
+
+    public static boolean compareListsIgnoringOrder(ArrayList list1, ArrayList list2) {
+
+        if (list1 == null || list2 == null) return false;
+        if (list1.size() != list2.size()) return false;
+
+        for (Object o : list1) {
+            list2.remove(o);
+        }
+
+        if (list2.size() != 0) return false;
+        return true;
     }
 }
