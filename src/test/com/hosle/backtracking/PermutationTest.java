@@ -3,7 +3,7 @@ package com.hosle.backtracking;
 import com.hosle.backtracking.Permutation;
 import org.junit.jupiter.api.Test;
 
-import java.util.List;
+import java.util.*;
 
 /**
  * Created by tanjiahao on 2018/3/5.
@@ -33,6 +33,13 @@ public class PermutationTest {
     @Test
     public void solution2() {
         new Permutation().solution2(new int[]{1,2,3});
+    }
+
+    @Test
+    public void solution3() {
+        LinkedList<Integer> input = new LinkedList<>(Arrays.asList(new Integer[]{1,2,3}));
+
+        new Permutation().permutation4(new LinkedList<Integer>(), input);
     }
 
 }

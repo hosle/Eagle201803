@@ -22,4 +22,13 @@ class HouseRobberTest {
         assertEquals(4, result);
     }
 
+    @Test
+    void solution3(){
+        int[] nums = new int[]{2,7,9,3,1};
+
+        assertEquals(12, new HouseRobber().solution2(nums));
+
+    }
+
+
 }

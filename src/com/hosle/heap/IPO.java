@@ -2,12 +2,8 @@ package com.hosle.heap;
 
 
 
-import javafx.util.Pair;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.PriorityQueue;
+import java.util.*;
 
 /**
  * https://leetcode.com/problems/ipo/description/
@@ -54,21 +50,21 @@ import java.util.PriorityQueue;
  */
 public class IPO {
     public int solution(int k, int w, int[] profits, int[] capital) {
-        ArrayList<Pair<Integer, Integer>> capitalProfitList = new ArrayList<>();
+        ArrayList<Map.Entry<Integer, Integer>> capitalProfitList = new ArrayList<>();
 
-        PriorityQueue<Pair<Integer, Integer>> pq = new PriorityQueue<>(new Comparator<Pair<Integer, Integer>>() {
-            public int compare(Pair<Integer, Integer> a, Pair<Integer, Integer> b) {
+        PriorityQueue<Map.Entry<Integer, Integer>> pq = new PriorityQueue<>(new Comparator<Map.Entry<Integer, Integer>>() {
+            public int compare(Map.Entry<Integer, Integer> a, Map.Entry<Integer, Integer> b) {
                 return b.getValue() - a.getValue();
             }
         });
 
         for (int i = 0; i < profits.length; i++) {
-            Pair<Integer, Integer> newPair = new Pair<>(capital[i], profits[i]);
+            Map.Entry<Integer, Integer> newPair = new AbstractMap.SimpleEntry<>(capital[i], profits[i]);
             capitalProfitList.add(newPair);
         }
 
-        Collections.sort(capitalProfitList, new Comparator<Pair<Integer, Integer>>() {
-            public int compare(Pair<Integer, Integer> a, Pair<Integer, Integer> b) {
+        Collections.sort(capitalProfitList, new Comparator<Map.Entry<Integer, Integer>>() {
+            public int compare(Map.Entry<Integer, Integer> a, Map.Entry<Integer, Integer> b) {
                 return a.getKey() - b.getKey();
             }
         });

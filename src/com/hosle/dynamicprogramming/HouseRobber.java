@@ -51,4 +51,21 @@ public class HouseRobber {
 
         return Math.max(sumArray.get(input.length-1), sumArray.get(input.length-2));
     }
+
+
+    public int solution2 (int[] input) {
+        //2 7 9 3 1
+        // array[i] = max (array[i-2] + Ai, array[i-1])
+
+        int[] total = new int[input.length];
+
+        total[0] = input[0];
+        total[1] = input[1];
+
+        for (int i = 2; i< input.length; i++) {
+            total[i] = Math.max(total[i-2] + input[i], total[i-1]);
+        }
+        int size = input.length;
+        return Math.max(total[size -2] + input[size-1], total[size-1]);
+    }
 }

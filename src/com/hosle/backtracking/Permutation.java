@@ -1,9 +1,8 @@
 package com.hosle.backtracking;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
+import com.hosle.array.ValidPalindrome;
+
+import java.util.*;
 
 /**
  * Created by tanjiahao on 2018/3/5.
@@ -125,6 +124,23 @@ public class Permutation {
             newOptions.remove(option);
             permutation3(intermediate, newOptions);
             intermediate.remove(option);
+        }
+    }
+
+
+    public void permutation4(LinkedList<Integer> result, LinkedList<Integer> remain) {
+        if (remain.isEmpty()) {
+            System.out.println(result);
+            return;
+        }
+
+        for (Integer item : remain) {
+            result.add(item);
+            LinkedList<Integer> newRemain = new LinkedList<Integer>();
+            newRemain.addAll(remain);
+            newRemain.remove(item);
+            permutation4(result, newRemain);
+            result.remove(item);
         }
     }
 }

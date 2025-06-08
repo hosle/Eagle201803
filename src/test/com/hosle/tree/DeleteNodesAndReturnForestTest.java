@@ -1,12 +1,15 @@
 package com.hosle.tree;
 
+
+import com.sun.source.tree.AssertTree;
 import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.assertTrue;
+
 
 public class DeleteNodesAndReturnForestTest {
 
