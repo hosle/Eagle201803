@@ -41,6 +41,7 @@ Utils about Arrays and Collections
 1. BuyAndSellStock
 2. HouseRobber
 3. LongestCommonSubsequence
+4. LongestPalindromicSubstring
 
 ## Linked_list
 
