@@ -34,6 +34,7 @@ Utils about Arrays and Collections
 3. PermutationUnique
 4. SubSets
 5. LetterCombinationsOfAPhoneNumber
+6. FindAllRoutes
 
 ## Dynamic Programming
 
