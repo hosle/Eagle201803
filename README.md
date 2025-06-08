@@ -40,6 +40,7 @@ Utils about Arrays and Collections
 
 1. BuyAndSellStock
 2. HouseRobber
+3. LongestCommonSubsequence
 
 ## Linked_list
 
