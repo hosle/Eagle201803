@@ -274,8 +274,8 @@ fun printArrayOrList() {
 
     val array2 = IntArray(5) { i -> i + 1 }
 
-    println("array : ${array.joinToString()}")
-    println("array2 : ${array2.joinToString()}")
+    println("Original array : ${array.joinToString()}")
+    println("Original array2 : ${array2.joinToString()}")
 
     println("array.contentToString() : ${array.contentToString()}")
 
