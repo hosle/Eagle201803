@@ -1,42 +1,114 @@
 package com.hosle.tree;
 
+import javafx.util.Pair;
+
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.Map;
 
 public class StepByStepDirectionsFromABinaryTreeNodeToAnother {
-    public String getDirections(TreeNode root, int startValue, int destValue) {
-        // Pair<Integer, String> step = new Pair<>();
-        LinkedList<Map<Integer, String>> queue = new LinkedList<>();
+    public String solution(TreeNode root, int startValue, int destValue) {
 
-        PreOrderTraverse(root, true, startValue, queue);
+        State result2 = traverse(root, startValue, destValue);
 
-        for (Map<Integer, String> step : queue){
-            System.out.print(step.entrySet() + ", ");
-        }
+        System.out.println("result2 : " + result2.toStart + "," + result2.toDest);
+
+
         return "L";
     }
 
-    public boolean PreOrderTraverse(TreeNode root, boolean isLeft, int target, LinkedList<Map<Integer,String>> queue){
-        if (root == null){
-            return false;
+    public State traverse(TreeNode root, int start, int dest) {
+        if (root == null) {
+            return new State();
         }
 
-        queue.add(Map.of(
-                root.val, isLeft?"L":"R"
-        ));
+        State leftResult = traverse(root.left, start, dest);
+        State rightResult = traverse(root.right, start, dest);
 
-        if (root.val == target){
-            return true;
+        if (leftResult.done){
+            return leftResult;
         }
-        boolean foundinLeft = PreOrderTraverse(root.left, true, target, queue);
-        if (!foundinLeft && !queue.isEmpty()){
-            queue.removeLast();
+        if (rightResult.done){
+            return rightResult;
         }
-        boolean foundinRight = PreOrderTraverse(root.right, false, target, queue);
-        if (!foundinRight && !queue.isEmpty()){
-            queue.removeLast();
-        }
-        return foundinLeft||foundinRight;
 
+        State newResult = new State();
+
+        if (root.val == start) {
+            newResult.foundStart = true;
+        } else if (root.val == dest) {
+            newResult.foundDest = true;
+        }
+
+        if (leftResult.foundStart) {
+            newResult.toStart = "U" + leftResult.toStart;
+            newResult.foundStart = true;
+        }
+        if (rightResult.foundStart) {
+            newResult.toStart = "U" + rightResult.toStart;
+            newResult.foundStart = true;
+        }
+
+        if (leftResult.foundDest) {
+            newResult.toDest = "L" + leftResult.toDest;
+            newResult.foundDest = true;
+        }
+        if (rightResult.foundDest) {
+            newResult.toDest = "R" + rightResult.toDest;
+            newResult.foundDest = true;
+        }
+
+        // merge when found common root
+        if (root.val == dest && leftResult.foundStart) {
+            newResult.toStart = "U" + leftResult.toStart;
+            newResult.toDest = "";
+            newResult.done = true;
+            System.out.println("merge at val = " + root.val + ", newResult = " + newResult.toStart + ", " + newResult.toDest);
+        }
+
+        if (root.val == start && leftResult.foundDest){
+            newResult.toStart = "";
+            newResult.toDest = "L" + leftResult.toDest;
+            newResult.done = true;
+            System.out.println("merge at val = " + root.val + ", newResult = " + newResult.toStart + ", " + newResult.toDest);
+        }
+
+        if (root.val == dest && rightResult.foundStart){
+            newResult.toStart = "U" + rightResult.toStart;
+            newResult.toDest = "";
+            newResult.done = true;
+            System.out.println("merge at val = " + root.val + ", newResult = " + newResult.toStart + ", " + newResult.toDest);
+        }
+
+        if (root.val == start && rightResult.foundDest){
+            newResult.toStart = "";
+            newResult.toDest = "R" + rightResult.toDest;
+            newResult.done = true;
+            System.out.println("merge at val = " + root.val + ", newResult = " + newResult.toStart + ", " + newResult.toDest);
+        }
+
+        if (leftResult.foundStart && rightResult.foundDest) {
+            newResult.toStart = "U" + leftResult.toStart;
+            newResult.toDest = "R" + rightResult.toDest;
+            System.out.println("merge at val = " + root.val + ", newResult = " + newResult.toStart + ", " + newResult.toDest);
+            newResult.done = true;
+        }
+
+        if (rightResult.foundStart && leftResult.foundDest){
+            newResult.toStart = "U" + rightResult.toStart;
+            newResult.toDest = "L" + leftResult.toDest;
+            System.out.println("merge at val = " + root.val + ", newResult = " + newResult.toStart + ", " + newResult.toDest);
+            newResult.done = true;
+        }
+
+        return newResult;
+    }
+
+    static class State {
+        String toStart = "";
+        String toDest = "";
+        Boolean foundStart = false;
+        Boolean foundDest = false;
+        Boolean done = false;
     }
 }

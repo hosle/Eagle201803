@@ -34,20 +34,50 @@ package com.hosle.dynamicprogramming;
  * text1 and text2 consist of only lowercase English characters.
  */
 public class LongestCommonSubsequence {
-    public int solution(String text1, String text2) {
 
-        int lengthOfSubsequence = 0;
-
-        for (int i = 0; i < text1.length(); i++) {
-            int start = 0;
-            for (int j = start; j < text2.length(); j++) {
-                if (text1.charAt(i) == text2.charAt(j)) {
-                    lengthOfSubsequence++;
-                    start++;
+    //brute force
+    public int solution1(String text1, String text2) {
+        int count = 0;
+        for (char char1 : text1.toCharArray()) {
+            for (char char2 : text2.toCharArray()) {
+                if (char1 == char2) {
+                    count++;
                 }
             }
         }
+        return count;
+    }
 
-        return lengthOfSubsequence;
+    // recursion
+    public int solution2(String text1, String text2) {
+        if (text1.isEmpty() || text2.isEmpty()){
+            return 0;
+        }
+        if (text1.charAt(text1.length()-1) == text2.charAt(text2.length()-1)){
+            return solution2(text1.substring(0,text1.length()-1),text2.substring(0,text2.length()-1)) + 1;
+        }else {
+            return Math.max(solution2(text1.substring(0,text1.length()-1), text2), solution2(text1, text2.substring(0,text2.length()-1)));
+        }
+    }
+
+    // dp memoization
+    public int solution3(String text1, String text2, int[][] intermedia) {
+        if (text1.isEmpty() || text2.isEmpty()) {
+            return 0;
+        }
+        int length1 = text1.length();
+        int length2 = text2.length();
+        if (intermedia[length1][length2] != -1){
+            return intermedia[length1][length2];
+        }
+
+        if (text1.charAt(length1 - 1) == text2.charAt(length2 - 1)) {
+            intermedia[length1][length2] = solution3(text1.substring(0, length1 - 1), text2.substring(0, length2 - 1), intermedia) + 1;
+            return intermedia[length1][length2];
+        } else {
+            intermedia[length1][length2] = Math.max(solution3(text1.substring(0, length1 - 1), text2, intermedia), solution3(text1, text2.substring(0, length2 - 1), intermedia));
+
+            return intermedia[length1][length2];
+        }
     }
 }
